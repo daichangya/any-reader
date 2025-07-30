@@ -2,5 +2,6 @@
   "buildCommand": "pnpm install && pnpm build:docs",
   "outputDirectory": "docs/dist",
   "installCommand": "pnpm install",
-  "framework": "vitepress"
+  "framework": "vitepress",
+  "node": "18.x"  // 指定 Node.js 18 版本
 }
