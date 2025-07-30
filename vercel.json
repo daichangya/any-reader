@@ -1,9 +1,6 @@
 {
   "buildCommand": "pnpm install && pnpm build:docs",
   "outputDirectory": "docs/dist",
-  "installCommand": "pnpm install",
-  "framework": "vitepress",
-  "engines": {
-    "node": "18.x"
-  }
+  "installCommand": "apt-get update && apt-get install -y python3-distutils && pnpm install",
+  "framework": "vitepress"
 }
