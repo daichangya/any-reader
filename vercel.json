@@ -3,5 +3,7 @@
   "outputDirectory": "docs/dist",
   "installCommand": "pnpm install",
   "framework": "vitepress",
-  "node": "18.x"
+  "engines": {
+    "node": "18.x"  // ValidValid way to specify Node.js version
+  }
 }
