@@ -1,6 +1,6 @@
 {
   "buildCommand": "pnpm install && pnpm build:docs",
   "outputDirectory": "docs/dist",
-  "installCommand": "apk add --no-cache python3 py3-pip && pip3 install setuptools && pnpm install",
+  "installCommand": "python3 -m ensurepip && pip3 install --upgrade setuptools && pnpm install",
   "framework": "vitepress"
 }
