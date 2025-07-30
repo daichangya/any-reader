@@ -3,5 +3,5 @@
   "outputDirectory": "docs/dist",
   "installCommand": "pnpm install",
   "framework": "vitepress",
-  "node": "18.x"  // 指定 Node.js 18 版本
+  "node": "18.x"
 }
