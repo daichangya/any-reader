@@ -1,6 +1,25 @@
 {
+  "version": 2,
   "buildCommand": "pnpm install && pnpm --filter docs docs:build",
   "outputDirectory": "docs/dist",
   "installCommand": "python3 -m ensurepip && pip3 install --upgrade setuptools && pnpm install",
-  "framework": "vitepress"
+  "framework": "vitepress",
+  "regions": ["iad1"],
+  "env": {
+    "NODE_OPTIONS": "--max-old-space-size=4096"
+  },
+  "build": {
+    "env": {
+      "VITE_APP_ENV": "production"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=60, s-maxage=60"
+      }
+    }
+  ]
 }
