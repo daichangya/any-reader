@@ -3,17 +3,17 @@
   "public": true,
   "builds": [
     {
-      "src": "packages/web/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "../server/public"
+        "distDir": "packages/server/public"
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/../server/public/$1"
+      "dest": "/packages/server/public/$1"
     }
   ],
   "buildCommand": "pnpm web:build-b",
