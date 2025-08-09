@@ -1,15 +1,21 @@
 {
   "version": 2,
+  "public": true,
   "builds": [
     {
       "src": "packages/web/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": "../server/public"
       }
     }
   ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/../server/public/$1"
+    }
+  ],
+  "buildCommand": "pnpm web:build-b",
+  "outputDirectory": "packages/server/public"
 }
