@@ -16,6 +16,6 @@
       "dest": "/packages/server/public/$1"
     }
   ],
-  "buildCommand": "pnpm web:build-b",
+  "buildCommand": "pnpm --filter=@any-reader/web build:b",
   "outputDirectory": "packages/server/public"
 }
